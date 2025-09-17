@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #3498db;         /* Light blue (hover/nav highlight/subheadings) */
+    --secondary: #2c3e50;       /* Dark blue (header/footer backgrounds, section titles) */
+    --complementary: #f4f7fc;   /* Light background for body */
+    --dark: #333;               /* Main text color */
+    --light: #ffffff;           /* Light color (for content background, etc.) */
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--complementary);
+    color: var(--dark);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Section */
+.header {
+    background-color: var(--secondary);
+    color: var(--light);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;   /* Added margin */
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.nav {
+    margin-top: 15px;
+}
+
+.nav a {
+    color: var(--light);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: var(--light);
+    padding: 30px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.article h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.article p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.article ul,
+.article ol {
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.article li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--secondary);
+    color: var(--light);
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    border-radius: 6px 6px 0 0;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 0;
+}
