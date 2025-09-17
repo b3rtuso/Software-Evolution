@@ -1,0 +1,90 @@
+body{
+    background-color: #ffe5ec
+    
+    
+
+
+}
+
+.border{
+        border-style: double;
+        border-color: black;
+        background-color: grey;
+        
+}
+
+.header{
+        background-color: #ffc2d1;
+        margin-left: 250px;
+        margin-right: 250px;
+        text-align: center;
+        border-style: double;
+        border-color: black;
+}
+
+.info1 {
+        background-color: #ffb3c6;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 250px;
+        margin-right: 250px;
+        text-align: justify;
+        border-style: double;
+        border-color: black;
+}
+.header2 {
+        background-color: #ffc2d1;
+        margin-left: 250px;
+        margin-right: 250px;
+        text-align: center;
+        border-style: double;
+        border-color: black;
+}
+
+.info2{
+        background-color: #ffb3c6;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 250px;
+        margin-right: 250px;
+        text-align: justify;
+        margin-bottom: 0;
+        border-style: double;
+        border-color: black;
+
+}
+
+.table{
+    margin-right: 326;
+        margin-left: 263px;
+        
+}
+
+.Footer1{
+        background-color: #ff8fab;
+        text-align: center;
+        border-style: double;
+        border-color: black;
+
+
+}
+
+
+.author{
+
+    background-color:#ffb3c6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    border-style: double;
+    border-color: black;
+
+
+
+}
