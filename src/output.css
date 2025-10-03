@@ -226,6 +226,9 @@
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
+  .ml-6 {
+    margin-left: calc(var(--spacing) * 6);
+  }
   .flex {
     display: flex;
   }
@@ -256,6 +259,9 @@
   .resize {
     resize: both;
   }
+  .list-disc {
+    list-style-type: disc;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -264,6 +270,13 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .space-x-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 6) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
+    }
   }
   .space-x-8 {
     :where(& > :not(:last-child)) {
