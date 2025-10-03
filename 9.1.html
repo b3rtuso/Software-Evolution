@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 9 Software Evolution</title>
+
+    <link href="src/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-gray-900 fixed w-full top-0 left-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="home.html" class="text-2xl font-bold text-white">
+            Software Evolution
+          </a>
+
+          <ul class="text-base font-semibold hidden md:flex space-x-6">
+            <li>
+              <a href="home.html" class="text-white hover:text-blue-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="9.1.html" class="text-white hover:text-blue-300"
+                >Processes</a
+              >
+            </li>
+            <li>
+              <a href="9.2 index.html" class="text-white hover:text-blue-300"
+                >Program Dynamics</a
+              >
+            </li>
+            <li>
+              <a href="index.html" class="text-white hover:text-blue-300"
+                >Legacy System Management</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6 mt-20">
+      <header class="mb-10 text-center">
+        <h1 class="text-4xl font-bold mb-2">The Software Evolution Process</h1>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Chapter 9.4 · Updated October 2025
+        </p>
+      </header>
+
+      <article class="[&>p]:mb-4 font-sans text-lg/6">
+        <p>
+          Software evolution is a complex activity that involves many different
+          processes. These vary depending on the type of software being
+          maintained, the development practices used in an organization, and the
+          skills of the people involved. In some organizations, evolution may be
+          an informal process where change requests come from conversations
+          between system users and developers. In others, it is highly
+          formalized with structured documentation at every stage.
+        </p>
+
+        <p>
+          System change proposals are the driver for system evolution in all
+          organizations. They may come from existing requirements that have not
+          yet been implemented, bug reports from users, new requests for
+          functionality, or improvement ideas from the development team. The
+          processes of change identification and system evolution are cyclic and
+          continue throughout the system’s lifetime (Figure 9.3).
+        </p>
+
+        <p>
+          Change proposals should be linked to the components of the system that
+          must be modified. This makes it possible to assess both the cost and
+          the impact of a change. This is part of the broader process of change
+          management, which ensures the correct versions of components are
+          included in each release.
+        </p>
+
+        <figure class="flex flex-col items-center my-8">
+          <img
+            src="Figure4.png"
+            alt="Figure 9.4 The software evolution process"
+          />
+          <figcaption class="text-center text-sm text-gray-500 mt-2">
+            Figure 9.4 — The software evolution process
+          </figcaption>
+        </figure>
+
+        <p>
+          Figure 9.4, adapted from Arthur (1988), shows an overview of the
+          evolution process. The key activities are change analysis, release
+          planning, system implementation, and release. The cycle repeats as new
+          changes are proposed for the next version.
+        </p>
+
+        <div class="font-bold text-lg">Change Implementation</div>
+        <p>
+          Change implementation can be thought of as an iteration of the
+          development process — designing, implementing, and testing revisions
+          to the system. A critical difference, however, is that the first step
+          often involves <strong>program understanding</strong>. Developers must
+          study the structure and functionality of the system to avoid
+          introducing new problems.
+        </p>
+
+        <figure class="flex flex-col items-center my-8">
+          <img src="Figure5.png" alt="Figure 9.5 Change implementation" />
+          <figcaption class="text-center text-sm text-gray-500 mt-2">
+            Figure 9.5 — Change implementation
+          </figcaption>
+        </figure>
+
+        <p>
+          Ideally, changes should also update the system’s specification and
+          design to remain consistent. Sometimes, prototyping may be used to
+          explore and validate proposed changes.
+        </p>
+
+        <div class="font-bold text-lg">Emergency Repairs</div>
+        <p>
+          Not all changes follow the formal process. Urgent situations may
+          require emergency fixes. These can arise when:
+        </p>
+        <ul class="list-disc ml-6">
+          <li>A serious system fault prevents normal operation.</li>
+          <li>
+            Unexpected effects in the operating environment disrupt performance.
+          </li>
+          <li>
+            Business changes, such as new legislation, force rapid system
+            updates.
+          </li>
+        </ul>
+
+        <figure class="flex flex-col items-center my-8">
+          <img
+            src="Figure6.png"
+            alt="Figure 9.6 The emergency repair process"
+          />
+          <figcaption class="text-center text-sm text-gray-500 mt-2">
+            Figure 9.6 — The emergency repair process
+          </figcaption>
+        </figure>
+
+        <p>
+          Emergency fixes are fast but risky: they may leave the requirements,
+          design, and code inconsistent. Repeated urgent patches can accelerate
+          <em>software aging</em>, making future maintenance harder and more
+          expensive.
+        </p>
+
+        <div class="font-bold text-lg">Agile Methods and Evolution</div>
+        <p>
+          Agile methods, based on incremental development, naturally extend into
+          software evolution. Automated regression testing and customer
+          involvement ensure smooth adaptation of systems. However, problems can
+          occur during team handovers:
+        </p>
+
+        <ul class="list-disc ml-6">
+          <li>
+            When a development team uses agile methods but the evolution team
+            prefers a plan-based approach, documentation gaps can hinder
+            evolution.
+          </li>
+          <li>
+            When development was plan-based but the evolution team wants agile,
+            reengineering may be necessary to add automated tests and refactor
+            code.
+          </li>
+        </ul>
+
+        <p>
+          <i>Poole and Huisman (2001)</i> report success in transitioning from a
+          plan-based approach to Extreme Programming (XP) for maintaining a
+          large system, once reengineering improved its structure.
+        </p>
+      </article>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+      <div
+        class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <p class="text-sm">
+          &copy; 2025
+          <span class="font-semibold text-white">Software Evolution</span>. All
+          rights reserved.
+        </p>
+        <p class="text-sm mt-2 md:mt-0">
+          Contact:
+          <span class="text-blue-400">Gonzales</span>,
+          <span class="text-blue-400">Riosa</span>,
+          <span class="text-blue-400">Codizal</span>,
+          <span class="text-blue-400">Villalobos</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
