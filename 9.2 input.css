@@ -1,0 +1,12 @@
+.Info12 {
+    @apply text-justify my-10 text-[20px] border-solid border-2 px-10 py-10
+
+}
+
+.heading {
+    @apply text-[45px]font-extrabold
+}
+
+.picture {
+    @apply border-solid border-5 animate-pulse  
+}
