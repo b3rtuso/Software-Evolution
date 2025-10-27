@@ -7,55 +7,61 @@
     <!-- Tailwind output.css -->
     <link href="src/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-50">
+  <body>
     <!-- Navbar -->
-    <nav class="bg-gray-900 fixed w-full top-0 left-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <a href="home.html" class="text-2xl font-bold text-white">
-            Software Evolution
-          </a>
-    
-          <!-- Hamburger button (only visible on small screens) -->
-          <div class="md:hidden">
-            <input type="checkbox" id="menu-toggle" class="hidden peer" />
-            <label
-              for="menu-toggle"
-              class="flex flex-col justify-between w-6 h-5 cursor-pointer"
-            >
-              <span
-                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:rotate-45 peer-checked:translate-y-2"
-              ></span>
-              <span
-                class="block w-full h-0.5 bg-white transition duration-300 opacity-100 peer-checked:opacity-0"
-              ></span>
-              <span
-                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:-rotate-45 peer-checked:-translate-y-2"
-              ></span>
-            </label>
-    
-            <!-- Dropdown menu -->
-            <ul
-              class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
-            >
-              <li><a href="home.html" class="text-white hover:text-blue-300">Home</a></li>
-              <li><a href="9.1.html" class="text-white hover:text-blue-300">Processes</a></li>
-              <li><a href="9.2 index.html" class="text-white hover:text-blue-300">Program Dynamics</a></li>
-              <li><a href="lawrence.html" class="text-white hover:text-blue-300">Software Maintenance</a></li>
-              <li><a href="index.html" class="text-white hover:text-blue-300">Legacy System Management</a></li>
-            </ul>
-          </div>
-    
-          <!-- Desktop menu -->
-          <ul class="hidden md:flex space-x-8 text-base font-semibold">
-            <li><a href="home.html" class="text-white hover:text-blue-300">Home</a></li>
-            <li><a href="9.1.html" class="text-white hover:text-blue-300">Processes</a></li>
-            <li><a href="9.2 index.html" class="text-white hover:text-blue-300">Program Dynamics</a></li>
-            <li><a href="lawrence.html" class="text-white hover:text-blue-300">Software Maintenance</a></li>
-            <li><a href="index.html" class="text-white hover:text-blue-300">Legacy System Management</a></li>
+    <nav class="navbar">
+      <div class="nav-container flex justify-between items-center h-16">
+        <a href="home.html" class="text-2xl font-bold text-white">
+          Software Evolution
+        </a>
+
+        <!-- Hamburger -->
+        <div class="md:hidden">
+          <input type="checkbox" id="menu-toggle" class="hidden peer" />
+          <label
+            for="menu-toggle"
+            class="flex flex-col justify-between w-6 h-5 cursor-pointer hamburger"
+          >
+            <span
+              class="peer-checked:rotate-45 peer-checked:translate-y-2"
+            ></span>
+            <span class="peer-checked:opacity-0"></span>
+            <span
+              class="peer-checked:-rotate-45 peer-checked:-translate-y-2"
+            ></span>
+          </label>
+
+          <ul
+            class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
+          >
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="9.1.html" class="nav-link">Processes</a></li>
+            <li>
+              <a href="9.2 index.html" class="nav-link">Program Dynamics</a>
+            </li>
+            <li>
+              <a href="lawrence.html" class="nav-link">Software Maintenance</a>
+            </li>
+            <li>
+              <a href="index.html" class="nav-link">Legacy System Management</a>
+            </li>
           </ul>
         </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-base font-semibold">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="9.1.html" class="nav-link">Processes</a></li>
+          <li>
+            <a href="9.2 index.html" class="nav-link">Program Dynamics</a>
+          </li>
+          <li>
+            <a href="lawrence.html" class="nav-link">Software Maintenance</a>
+          </li>
+          <li>
+            <a href="index.html" class="nav-link">Legacy System Management</a>
+          </li>
+        </ul>
       </div>
     </nav>
     
@@ -67,11 +73,14 @@
         <p class="text-gray-600 text-sm">
           Chapter 9.4 · Updated October 2025
         </p>
+        <p class="text-muted">
+          Written By: <p class="author-name">Angel Bert M. Gonzales</p>
+        </p>
       </header>
 
-      <article class="[&>p]:mb-4 text-lg/6">
+      <article class="text-lg/6">
         <p>
-          <strong>Software evolution</strong>is a complex activity that involves many different
+          <strong>Software evolution</strong> is a complex activity that involves many different
           processes. These vary depending on the type of software being
           maintained, the development practices used in an organization, and the
           skills of the people involved. In some organizations, evolution may be
@@ -97,24 +106,87 @@
           included in each release.
         </p>
 
-        <figure class="flex flex-col items-center my-8">
-          <img
-            src="images/Figure4.png"
-            alt="Figure 9.4 The software evolution process"
-          />
-          <figcaption class="text-center text-sm text-gray-500 mt-2">
-            Figure 9.4 — The software evolution process
-          </figcaption>
-        </figure>
-
-        <p>
-          Figure 9.4, adapted from Arthur (1988), shows an overview of the
+        <div class="relative">
+          <input type="checkbox" id="img4" class="hidden peer" />
+          <figure class="flex flex-col items-center my-8">
+            <label for="img4" class="cursor-pointer">
+              <img
+                src="images/Figure4.png"
+                alt=" Figure 9.4 — The software evolution process"
+                class="transition-transform duration-300 hover:scale-105"
+              />
+            </label>
+            <figcaption class="text-center text-sm text-gray-500 mt-2">
+              Figure 9.4 — The software evolution process
+            </figcaption>
+          </figure>
+      
+          <div
+            class="fixed inset-0 bg-black/70 hidden peer-checked:flex justify-center items-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg p-6 max-w-4xl flex flex-col md:flex-row items-center gap-6 relative"
+            >
+              <label
+                for="img4"
+                class="absolute top-3 right-3 text-xl cursor-pointer text-gray-700 hover:text-gray-900"
+                >×</label
+              >
+              <img
+                src="images/Figure4.png"
+                alt="Zoomed Figure4"
+                class="w-full md:w-1/2 rounded-lg"
+              />
+              <div class="flex flex-col items-start">
+                <p class="text-blue-400  font-bold">
+                  Figure 9.4 — The software evolution process
+                </p>
+              <p class="text-gray-700 text-sm md:text-base">
+                Figure 9.4, adapted from Arthur (1988), shows an overview of the
           evolution process. The key activities are change analysis, release
           planning, system implementation, and release. The cycle repeats as new
           changes are proposed for the next version.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p>
+          The main activities in the evolution process are as follows:
+        </p> 
+        <ul class="list-disc ml-6">
+          <li>Change analysis</li>
+          <li>Release planning</li>
+          <li>Change implementation</li>
+          <li>Emergency repairs</li> 
+          <li>Agile methods and evolution</li>
+        </ul>
+          <h2 class="font-bold text-lg pt-4">Change Analysis</h2>
+        <p>
+          Change analysis involves understanding the proposed changes and their
+          implications for the system. This includes assessing the costs,
+          benefits, and risks of making the changes. It may also involve
+          prototyping to explore possible solutions.
         </p>
-
-        <div class="font-bold text-lg">Change Implementation</div>
+        <p>
+          During change analysis, developers must understand how the proposed
+          changes will affect the existing system. This may involve studying
+          documentation, examining the code, and consulting with users and other
+          stakeholders.
+        </p>
+        <h3 class="font-bold text-lg">Release Planning</h3>
+        <p>
+          Release planning involves deciding which changes will be included in
+          the next system release. This requires balancing the need for new
+          functionality with the costs and risks of making changes. It may also
+          involve scheduling releases to align with business needs.
+        </p>
+        <p>
+          During release planning, priorities must be set for the proposed
+          changes. This may involve negotiating with stakeholders to agree on
+          which changes are most important. The plan should also consider the
+          resources available for implementing the changes.
+        </p>
+        <h4 class="font-bold text-lg">Change Implementation</h4>
         <p>
           Change implementation can be thought of as an iteration of the
           development process — designing, implementing, and testing revisions
@@ -124,20 +196,54 @@
           introducing new problems.
         </p>
 
-        <figure class="flex flex-col items-center my-8">
-          <img src="images/Figure5.png" alt="Figure 9.5 Change implementation" />
-          <figcaption class="text-center text-sm text-gray-500 mt-2">
-            Figure 9.5 — Change implementation
-          </figcaption>
-        </figure>
-
+        <div class="relative">
+          <input type="checkbox" id="img5" class="hidden peer" />
+          <figure class="flex flex-col items-center my-8">
+            <label for="img5" class="cursor-pointer">
+              <img
+                src="images/Figure5.png"
+                alt=" Figure 9.5 — Change implementation"
+                class="transition-transform duration-300 hover:scale-105"
+              />
+            </label>
+            <figcaption class="text-center text-sm text-gray-500 mt-2">
+              Figure 9.5 — Change implementation
+            </figcaption>
+          </figure>
+      
+          <div
+            class="fixed inset-0 bg-black/70 hidden peer-checked:flex justify-center items-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg p-6 max-w-4xl flex flex-col md:flex-row items-center gap-6 relative"
+            >
+              <label
+                for="img5"
+                class="absolute top-3 right-3 text-xl cursor-pointer text-gray-700 hover:text-gray-900"
+                >×</label
+              >
+              <img
+                src="images/Figure5.png"
+                alt="Zoomed Figure5"
+                class="w-full md:w-1/2 rounded-lg"
+              />
+              <div class="flex flex-col items-start">
+                <p class="text-blue-400  font-bold">
+                  Figure 9.5 — Change implementation
+                </p>
+              <p class="text-gray-700 text-sm md:text-base">
+                This diagram illustrates the Change implementation is like a development iteration where system revisions are designed, implemented, and tested. Unlike initial development, it often begins with understanding the existing program’s structure and functionality to ensure changes don’t introduce new issues.
+              </p>
+            </div>
+          </div>
+        </div>
         <p>
           Ideally, changes should also update the system’s specification and
           design to remain consistent. Sometimes, prototyping may be used to
           explore and validate proposed changes.
         </p>
 
-        <div class="text-lg">Emergency Repairs</div>
+        <h4 class="text-lg">Emergency Repairs</h4>
         <p>
           Not all changes follow the formal process. Urgent situations may
           require emergency fixes. These can arise when:
@@ -153,15 +259,49 @@
           </li>
         </ul>
 
-        <figure class="flex flex-col items-center my-8">
-          <img
-            src="images/Figure6.png"
-            alt="Figure 9.6 The emergency repair process"
-          />
-          <figcaption class="text-center text-sm text-gray-500 mt-2">
-            Figure 9.6 — The emergency repair process
-          </figcaption>
-        </figure>
+        <div class="relative">
+          <input type="checkbox" id="img6" class="hidden peer" />
+          <figure class="flex flex-col items-center my-8">
+            <label for="img6" class="cursor-pointer">
+              <img
+                src="images/Figure6.png"
+                alt="Figure 9.6 The emergency repair process"
+                class="transition-transform duration-300 hover:scale-105"
+              />
+            </label>
+            <figcaption class="text-center text-sm text-gray-500 mt-2">
+              Figure 9.6 — The emergency repair process
+            </figcaption>
+          </figure>
+      
+          <div
+            class="fixed inset-0 bg-black/70 hidden peer-checked:flex justify-center items-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg p-6 max-w-4xl flex flex-col md:flex-row items-center gap-6 relative"
+            >
+              <label
+                for="img6"
+                class="absolute top-3 right-3 text-xl cursor-pointer text-gray-700 hover:text-gray-900"
+                >×</label
+              >
+              <img
+                src="images/Figure6.png"
+                alt="Zoomed Figure 6"
+                class="w-full md:w-1/2 rounded-lg"
+              />
+              <div class="flex flex-col items-start">
+                <p class="text-blue-400  font-bold">
+                  Figure 9.6 — The emergency repair process
+                </p>
+              <p class="text-gray-700 text-sm md:text-base">
+                This diagram illustrates the Emergency fixes process. When a critical
+                issue arises, the first step is to identify and analyze the problem. Next,
+                a quick fix is designed and implemented to restore system functionality.  Finally,  the fix is tested to ensure it resolves the issue without introducing new problems. 
+              </p>
+            </div>
+          </div>
+        </div>
 
         <p>
           Emergency fixes are fast but risky: they may leave the requirements,
@@ -170,7 +310,7 @@
           expensive.
         </p>
 
-        <div class="text-lg">Agile Methods and Evolution</div>
+        <h5 class="text-lg">Agile Methods and Evolution</h5>
         <p>
           Agile methods, based on incremental development, naturally extend into
           software evolution. Automated regression testing and customer

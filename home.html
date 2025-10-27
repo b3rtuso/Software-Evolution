@@ -5,122 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chapter 9 Software Evolution</title>
 
+    <!-- Tailwind compiled output -->
     <link href="src/output.css" rel="stylesheet" />
   </head>
-  <body class="bg-gray-50">
-    <nav class="bg-gray-900 fixed w-full top-0 left-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <a href="home.html" class="text-2xl font-bold text-white">
-            Software Evolution
-          </a>
 
-          <!-- Hamburger button (only visible on small screens) -->
-          <div class="md:hidden">
-            <input type="checkbox" id="menu-toggle" class="hidden peer" />
-            <label
-              for="menu-toggle"
-              class="flex flex-col justify-between w-6 h-5 cursor-pointer"
-            >
-              <span
-                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:rotate-45 peer-checked:translate-y-2"
-              ></span>
-              <span
-                class="block w-full h-0.5 bg-white transition duration-300 opacity-100 peer-checked:opacity-0"
-              ></span>
-              <span
-                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:-rotate-45 peer-checked:-translate-y-2"
-              ></span>
-            </label>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container flex justify-between items-center h-16">
+        <a href="home.html" class="text-2xl font-bold text-white">
+          Software Evolution
+        </a>
 
-            <!-- Dropdown menu -->
-            <ul
-              class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
-            >
-              <li>
-                <a href="home.html" class="text-white hover:text-blue-300"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="9.1.html" class="text-white hover:text-blue-300"
-                  >Processes</a
-                >
-              </li>
-              <li>
-                <a href="9.2 index.html" class="text-white hover:text-blue-300"
-                  >Program Dynamics</a
-                >
-              </li>
-              <li>
-                <a href="lawrence.html" class="text-white hover:text-blue-300"
-                  >Software Maintenance</a
-                >
-              </li>
-              <li>
-                <a href="index.html" class="text-white hover:text-blue-300"
-                  >Legacy System Management</a
-                >
-              </li>
-            </ul>
-          </div>
+        <!-- Hamburger -->
+        <div class="md:hidden">
+          <input type="checkbox" id="menu-toggle" class="hidden peer" />
+          <label
+            for="menu-toggle"
+            class="flex flex-col justify-between w-6 h-5 cursor-pointer hamburger"
+          >
+            <span
+              class="peer-checked:rotate-45 peer-checked:translate-y-2"
+            ></span>
+            <span class="peer-checked:opacity-0"></span>
+            <span
+              class="peer-checked:-rotate-45 peer-checked:-translate-y-2"
+            ></span>
+          </label>
 
-          <!-- Desktop menu -->
-          <ul class="hidden md:flex space-x-8 text-base font-semibold">
+          <ul
+            class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
+          >
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="9.1.html" class="nav-link">Processes</a></li>
             <li>
-              <a href="home.html" class="text-white hover:text-blue-300"
-                >Home</a
-              >
+              <a href="9.2 index.html" class="nav-link">Program Dynamics</a>
             </li>
             <li>
-              <a href="9.1.html" class="text-white hover:text-blue-300"
-                >Processes</a
-              >
+              <a href="lawrence.html" class="nav-link">Software Maintenance</a>
             </li>
             <li>
-              <a href="9.2 index.html" class="text-white hover:text-blue-300"
-                >Program Dynamics</a
-              >
-            </li>
-            <li>
-              <a href="lawrence.html" class="text-white hover:text-blue-300"
-                >Software Maintenance</a
-              >
-            </li>
-            <li>
-              <a href="index.html" class="text-white hover:text-blue-300"
-                >Legacy System Management</a
-              >
+              <a href="index.html" class="nav-link">Legacy System Management</a>
             </li>
           </ul>
         </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-base font-semibold">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="9.1.html" class="nav-link">Processes</a></li>
+          <li>
+            <a href="9.2 index.html" class="nav-link">Program Dynamics</a>
+          </li>
+          <li>
+            <a href="lawrence.html" class="nav-link">Software Maintenance</a>
+          </li>
+          <li>
+            <a href="index.html" class="nav-link">Legacy System Management</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto p-6 mt-20">
+    <!-- Main -->
+    <main class="main-content">
       <header class="mb-10 text-center">
-        <h1 class="text-4xl font-bold mb-2">
-          Introduction to Software Evolution
-        </h1>
-        <p class="text-gray-600 text-sm">Chapter 9 · Updated October 2025</p>
+        <h1 class="text-4xl mb-2">Introduction to Software Evolution</h1>
+        <p class="text-muted">Chapter 9 · Updated October 2025</p>
+        <p class="text-muted">
+          Written By: <p class="author-name">Angel Bert M. Gonzales</p>
+        </p>
       </header>
-
-      <article class="[&>p]:mb-4 text-lg/6">
+      <article class="text-lg/6">
         <p>
           <strong>Software development</strong> does not stop when a system is
           delivered but continues throughout the lifetime of the system. After a
           system has been deployed, it inevitably has to change if it is to
           remain useful. Business changes and changes to user expectations
-          generate new requirements for the existing software.
+          generate new requirements for the existing software. Parts of the
+          software may have to be modified to correct errors that are found in
+          operation, to adapt it for changes to its hardware and software
+          platform, and to improve its performance or other non-functional
+          characteristics.
         </p>
-
+      
         <p>
-          Software evolution is important because organizations have invested
-          large amounts of money in their software and are now completely
-          dependent on these systems. Their systems are critical business assets
-          and they have to invest in system change to maintain the value of
-          these assets.
+          <strong>Software evolution</strong> is important because organizations
+          have invested large amounts of money in their software and are now
+          completely dependent on these systems. Their systems are critical
+          business assets and they have to invest in system change to maintain
+          the value of these assets. Consequently, most large companies spend
+          more on maintaining existing systems than on new systems development.
+          Based on an informal industry poll, Erlikh (2000) suggests that 85–90%
+          of organiza tional software costs are evolution costs. Other surveys
+          suggest that about two-thirds of software costs are evolution costs.
+          For sure, the costs of software change are a large part of the IT
+          budget for all companies.
         </p>
         <p>
           Studies of software evolution show that, on average, over 50% of the
@@ -130,7 +110,7 @@
           development, you should expect to spend more time and money on system
           change than on initial development.
         </p>
-
+      
         <p>
           Software evolution may be triggered by changing business requirements,
           by reports of software defects, or by changes to other systems in a
@@ -140,24 +120,59 @@
           which software systems have to be developed and managed in an
           environment where they depend on many other software systems.
         </p>
-
-        <div class="font-bold text-lg">The Spiral Model</div>
+      
+        <h2 class="font-bold text-lg">The Spiral Model</h2>
         <p>
           You should, therefore, think of software engineering as a spiral
           process with requirements, design, implementation, and testing going
           on throughout the lifetime of the system.
         </p>
-
-        <figure class="flex flex-col items-center my-8">
-          <img
-            src="images/Figure1.png"
-            alt="Figure 9.1 A spiral model of development and evolution"
-          />
-          <figcaption class="text-center text-sm text-gray-500 mt-2">
-            Figure 9.1 — A spiral model of development and evolution
-          </figcaption>
-        </figure>
-
+      
+        <!-- Figure 1 -->
+        <div class="relative">
+          <input type="checkbox" id="img1" class="hidden peer" />
+          <figure class="flex flex-col items-center my-8">
+            <label for="img1" class="cursor-pointer">
+              <img
+                src="images/Figure1.png"
+                alt="Figure 9.1 A spiral model of development and evolution"
+                class="transition-transform duration-300 hover:scale-105"
+              />
+            </label>
+            <figcaption class="text-center text-sm text-gray-500 mt-2">
+              Figure 9.1 — A spiral model of development and evolution
+            </figcaption>
+          </figure>
+      
+          <div
+            class="fixed inset-0 bg-black/70 hidden peer-checked:flex justify-center items-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg p-6 max-w-4xl flex flex-col md:flex-row items-center gap-6 relative"
+            >
+              <label
+                for="img1"
+                class="absolute top-3 right-3 text-xl cursor-pointer text-gray-700 hover:text-gray-900"
+                >×</label
+              >
+              <img
+                src="images/Figure1.png"
+                alt="Zoomed Figure 1"
+                class="w-full md:w-1/2 rounded-lg"
+              />
+              <div class="flex flex-col items-start">
+                <p class="text-blue-400  font-bold">
+                  Figure 9.1 — A spiral model of development and evolution
+                </p>
+              <p class="text-gray-700 text-sm md:text-base">
+                This diagram illustrates the spiral model of development and
+                evolution, showing how requirements, design, and testing continue
+                iteratively throughout the software's lifecycle.
+              </p>
+            </div>
+          </div>
+        </div>
+      
         <p>
           This model of software evolution implies that a single organization is
           responsible for both the initial software development and the
@@ -169,52 +184,123 @@
           that is responsible for the evolution of the system. This is true of
           most packaged software systems.
         </p>
-
-        <div class="font-bold">Evolution vs. Servicing</div>
+      
+        <h3 class="font-bold">Evolution vs. Servicing</h3>
         <p>
           Rajlich and Bennett (2000) proposed an alternative view of the
           software evolution life cycle, distinguishing between
           <strong>evolution</strong> and <strong>servicing</strong>.
         </p>
-
-        <figure class="flex flex-col items-center my-8">
-          <img
-            src="images/Figure2.png"
-            alt="Figure 9.2 Evolution and servicing"
-          />
-          <figcaption class="text-center text-sm text-gray-500 mt-2">
-            Figure 9.2 — Evolution and servicing
-          </figcaption>
-        </figure>
-
-        <figure class="flex flex-col items-center my-8">
-          <img
-            src="images/Figure3.png"
-            alt="Figure 9.3 Change identification and evolution processes"
-          />
-          <figcaption class="text-center text-sm text-gray-500 mt-2">
-            Figure 9.3 — Change identification and evolution processes
-          </figcaption>
-        </figure>
+      
+        <!-- Figure 2 -->
+        <div class="relative">
+          <input type="checkbox" id="img2" class="hidden peer" />
+          <figure class="flex flex-col items-center my-8 box-shadow-lg">
+            <label for="img2" class="cursor-pointer">
+              <img
+                src="images/Figure2.png"
+                alt="Figure 9.2 Evolution and servicing"
+                class="transition-transform duration-300 hover:scale-105"
+              />
+            </label>
+            <figcaption class="text-center text-sm text-gray-500 mt-2">
+              Figure 9.2 — Evolution and Servicing
+            </figcaption>
+          </figure>
+      
+          <div
+            class="fixed inset-0 bg-black/70 hidden peer-checked:flex justify-center items-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg p-6 max-w-4xl flex flex-col md:flex-row items-center gap-6 relative"
+            >
+              <label
+                for="img2"
+                class="absolute top-3 right-3 text-xl cursor-pointer text-gray-700 hover:text-gray-900"
+                >×</label
+              >
+              <img
+                src="images/Figure2.png"
+                alt="Zoomed Figure 2"
+                class="w-full md:w-1/2 rounded-lg"
+              />
+              <div class="flex flex-col items-start">
+                <p class="text-blue-600 font-bold">
+                  Figure 9.2 — Evolution and Servicing
+                </p>
+                <p class="text-gray-700 text-sm md:text-base">
+                  This figure contrasts the phases of evolution and servicing,
+                  showing how software systems transition from active development to
+                  maintenance and eventual phase-out.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Figure 3 -->
+        <div class="relative">
+          <input type="checkbox" id="img3" class="hidden peer" />
+          <figure class="flex flex-col items-center my-8">
+            <label for="img3" class="cursor-pointer">
+              <img
+                src="images/Figure3.png"
+                alt="Figure 9.3 Change identification and evolution processes"
+                class="transition-transform duration-300 hover:scale-105"
+              />
+            </label>
+            <figcaption class="text-center text-sm text-gray-500 mt-2">
+              Figure 9.3 — Change identification and evolution processes
+            </figcaption>
+          </figure>
+      
+          <div
+            class="fixed inset-0 bg-black/70 hidden peer-checked:flex justify-center items-center z-50"
+          >
+            <div
+              class="bg-white rounded-lg p-6 max-w-4xl flex flex-col md:flex-row items-center gap-6 relative"
+            >
+              <label
+                for="img3"
+                class="absolute top-3 right-3 text-xl cursor-pointer text-gray-700 hover:text-gray-900"
+                >×</label
+              >
+              <img
+                src="images/Figure3.png"
+                alt="Zoomed Figure 3"
+                class="w-full md:w-1/2 rounded-lg"
+              />
+              <div class="flex flex-col items-start">
+                <p class="text-blue-400  font-bold">
+                  Figure 9.3 — Change identification and evolution processes
+                </p>
+                <p class="text-gray-700 text-sm md:text-base">
+                 This diagram visualizes how changes are identified, analyzed, and
+                  incorporated into the software evolution process.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      
         <p>
-          In this model, the software is initially developed and then enters an
-          evolution phase in which it is changed to meet new requirements. The
-          evolution process continues until the costs of changing the software
-          exceed the value that these changes provide.
+          In this stage, the software moves from evolution to servicing. During the servicing phase, the software is still useful and used but only small tactical changes are
+           made to it. During this stage, the company is usually considering how the software
+           can be replaced. In the final stage, phase-out, the software may still be used but no
+           further changes are being implemented. Users have to work around any problems
+           that they discover.
         </p>
       </article>
+      
     </main>
-
-    <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
-      <div
-        class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between"
-      >
+    <footer class="footer">
+      <div class="footer-container">
         <p class="text-sm">
           &copy; 2025
           <span class="font-semibold text-white">Software Evolution</span>. All
           rights reserved.
         </p>
-
         <p class="text-sm mt-2 md:mt-0">
           Contact:
           <span class="text-blue-400">Gonzales</span>,

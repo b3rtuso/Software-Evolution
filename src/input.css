@@ -1,20 +1,143 @@
-@import "tailwindcss";
+/* ============================================================
+   GLOBAL SITE STYLE — Software Evolution
+   ============================================================ */
+   @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* 👇 Apply Tailwind’s built-in sans-serif font globally */
-@layer base {
-  body {
-    @apply font-sans text-gray-900;
+   /* ===== THEME SETTINGS ===== */
+   @theme {
+    --font-display: "Poppins", sans-serif;
+    --font-body: "Poppins", sans-serif;
+  
+    --color-primary: #2563eb;
+    --color-secondary: #4b5563;
+    --color-accent: #f59e0b;
+    --color-bg: #f9fafb;
+    --color-text: #1F2937;
+    --color-muted: #6b7280;
   }
-
-  h1, h2, h3, h4 {
-    @apply font-sans font-bold;
+  
+   
+    /* ================================
+   FONTS (TTF)
+   ================================ */
+   @font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
   }
-
-  article {
-    @apply font-sans;
+  
+  @font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
   }
-}
+  
+  @font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+   /* ===== BASE STYLES ===== */
+   @layer base {
+     html {
+       font-family: var(--font-body);
+       color: var(--color-text);
+       background-color: var(--color-bg);
+       scroll-behavior: smooth;
+     }
+   
+     h1, h2, h3, h4, h5, h6 {
+       font-family: var(--font-display);
+       color: var(--color-primary);
+       @apply font-bold;
+     }
+   
+     a {
+       @apply transition-colors duration-200;
+     }
+   
+     img {
+       @apply max-w-full h-auto rounded-lg;
+     }
+
+     article p {
+        @apply mb-4 text-lg/6 leading-relaxed;
+     }
+   }
+   
+
+   
+   /* ===== COMPONENT STYLES ===== */
+   @layer components {
+     /* Navbar */
+     .navbar {
+       background-color: var(--color-text);
+       @apply bg-gray-900 fixed w-full top-0 left-0 z-50;
+     }
+   
+     .nav-container {
+       @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+     }
+   
+     .nav-link {
+       @apply text-white hover:text-[color:var(--color-primary)];
+     }
+   
+     /* Hamburger */
+     .hamburger span {
+       @apply block w-full h-0.5 bg-white transition duration-300;
+     }
+   
+     /* Main Content */
+     .main-content {
+       @apply max-w-4xl mx-auto p-6 mt-20;
+     }
+   
+     /* Footer */
+     .footer {
+       background-color: var(--color-text);
+       @apply text-gray-300 py-6 mt-10 text-sm;
+     }
+   
+     .footer-container {
+       @apply max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between;
+     }
+   }
+   
+   /* ===== UTILITIES ===== */
+   @layer utilities {
+     .text-muted {
+       color: var(--color-muted);
+       @apply text-sm;
+     }
+   
+     .author-name {
+       color: var(--color-accent);
+       @apply italic ;
+     }
+   
+     .section-title {
+       @apply font-bold text-lg mt-6 mb-2;
+       color: var(--color-primary);
+     }
+   
+     .btn-primary {
+       background-color: var(--color-primary);
+       color: white;
+       @apply px-4 py-2 rounded-md font-semibold hover:opacity-90 transition;
+     }
+   
+     .btn-accent {
+       background-color: var(--color-accent);
+       color: white;
+       @apply px-4 py-2 rounded-md font-semibold hover:opacity-90 transition;
+     }
+   }
+   
