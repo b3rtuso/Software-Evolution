@@ -72,7 +72,6 @@
      }
    }
    
-
    
    /* ===== COMPONENT STYLES ===== */
    @layer components {
@@ -139,5 +138,18 @@
        color: white;
        @apply px-4 py-2 rounded-md font-semibold hover:opacity-90 transition;
      }
-   }
-   
+    }
+
+  /* 9.2 */
+
+     .article {
+      @apply border-solid border-2 mt-10 mx-18 animate-pulse mx-auto
+    }
+
+    .background {
+      @apply bg-[#9EC6F3] mx-50 rounded-t-lg text-justify my-10
+    }
+
+    .figure {
+      @apply bg-[#F5D2D2]
+    }
