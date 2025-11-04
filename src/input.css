@@ -148,7 +148,7 @@
 
 /* ===== Cresmarie STYLES ===== */
 .articlecres {
-  @apply animate-pulse 
+  @apply border-solid border-2 mt-10 mx-18 animate-pulse mx-auto
 }
 .backgroundcres {
   @apply bg-[#9EC6F3] rounded-t-lg text-justify p-10;
