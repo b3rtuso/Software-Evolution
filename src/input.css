@@ -46,11 +46,13 @@
   
    /* ===== BASE STYLES ===== */
    @layer base {
+    
      html {
        font-family: var(--font-body);
        color: var(--color-text);
        background-color: var(--color-bg);
        scroll-behavior: smooth;
+       height: 100%;
      }
    
      h1, h2, h3, h4, h5, h6 {
@@ -83,7 +85,7 @@
      }
    
      .nav-container {
-       @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+       @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300";
      }
    
      .nav-link {
@@ -102,14 +104,15 @@
    
      /* Footer */
      .footer {
-       background-color: var(--color-text);
-       @apply text-gray-300 py-6 mt-10 text-sm;
+      background-color: var(--color-text);
+      @apply text-gray-300 py-6 mt-0 text-sm w-full;
+    }    
      }
    
      .footer-container {
        @apply max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between;
      }
-   }
+   
    
    /* ===== UTILITIES ===== */
    @layer utilities {
@@ -140,4 +143,99 @@
        @apply px-4 py-2 rounded-md font-semibold hover:opacity-90 transition;
      }
    }
-   
+
+
+
+/* ===== Cresmarie STYLES ===== */
+.articlecres {
+  @apply border-solid border-2 mt-10 mx-18 animate-pulse mx-auto
+}
+.backgroundcres {
+  @apply bg-[#9EC6F3] rounded-t-lg text-justify p-10;
+}
+
+
+.figurecres {
+  @apply bg-[#F5D2D2]
+}
+
+
+
+/* =========================
+  Catherine STYLES
+   ========================= */
+
+   .cath {
+    position: relative;
+    background: #f9fafb;
+    color: #111827;
+    padding: 3.5rem;
+    border-radius: 1.25rem;
+    line-height: 1.75;
+    letter-spacing: 0.2px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .cath ul,.cath li {
+  color: inherit;
+  transition: color 0.3s ease;
+  list-style-position: inside;
+}
+
+  /* 🧠 Reader-focused mode — subtle fade on long text */
+  .cath .content p ul {
+    margin-bottom: 1.5rem;
+    transition: opacity 0.3s ease;
+  }
+  .cath:hover .content p:not(:hover) {
+    opacity: 0.6;
+  }
+  
+  /* 🧘 Reader comfort (hover = dark mode focus) */
+  .cath:hover {
+    background: #111827;
+    color: #f9fafb;
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+    transition: all 0.4s ease;
+  }
+  
+  /* Typography focus */
+  .cath h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2563eb;
+    transition: color 0.3s ease;
+  }
+  .cath:hover h2 {
+    color: #93c5fd;
+  }
+  
+
+/* ===== Lawrence STYLES ===== */
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.law {
+  background: linear-gradient(90deg, #0f172a, #1e3a8a, #facc15);
+  background-size: 200% 200%;
+  color: #fefce8;
+  padding: 3.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 0 0 2px rgba(250, 204, 21, 0.3),
+              0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: gradient-move 12s ease infinite;
+  transition: all 0.4s ease;
+}
+
+.law:hover {
+  background-position: 100% 50%;
+  box-shadow: inset 0 0 0 2px rgba(250, 204, 21, 0.6),
+              0 15px 30px rgba(250, 204, 21, 0.4);
+  transform: scale(1.03);
+}

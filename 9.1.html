@@ -32,7 +32,7 @@
           </label>
 
           <ul
-            class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
+            class="nav-container"
           >
             <li><a href="home.html" class="nav-link">Home</a></li>
             <li><a href="9.1.html" class="nav-link">Processes</a></li>
@@ -67,7 +67,7 @@
     
 
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto p-6 mt-20">
+    <main class="main-content">
       <header class="mb-10 text-center">
         <h1 class="text-4xl mb-2">The Software Evolution Processes</h1>
         <p class="text-gray-600 text-sm">
@@ -79,8 +79,20 @@
       </header>
 
       <article class="text-lg/6">
-        <p>
-          <strong>Software evolution</strong> is a complex activity that involves many different
+        <p class="text-lg leading-relaxed">
+          <strong class="relative inline-block group cursor-pointer text-blue-600">
+            Software evolution
+            <!-- Hidden video preview -->
+            <video
+              src="src/video/evolution.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              class="absolute left-1/2 top-full mt-3 w-64 rounded-lg shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-300"
+            ></video>
+          </strong>
+         is a complex activity that involves many different
           processes. These vary depending on the type of software being
           maintained, the development practices used in an organization, and the
           skills of the people involved. In some organizations, evolution may be
@@ -341,7 +353,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-6 mt-10">
+    <footer class="footer">
       <div
         class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between"
       >
