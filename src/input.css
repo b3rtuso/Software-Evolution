@@ -200,8 +200,6 @@
   
   /* Typography focus */
   .cath h2 {
-    font-size: 1.875rem;
-    font-weight: 700;
     margin-bottom: 1rem;
     color: #2563eb;
     transition: color 0.3s ease;
