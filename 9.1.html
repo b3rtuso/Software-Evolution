@@ -8,60 +8,94 @@
     <link href="src/output.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="nav-container flex justify-between items-center h-16">
-        <a href="home.html" class="text-2xl font-bold text-white">
-          Software Evolution
-        </a>
+<body class="bg-gray-50">
+    <nav class="bg-gray-900 fixed w-full top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <a href="home.html" class="text-2xl font-bold text-white">
+            Software Evolution
+          </a>
 
-        <!-- Hamburger -->
-        <div class="md:hidden">
-          <input type="checkbox" id="menu-toggle" class="hidden peer" />
-          <label
-            for="menu-toggle"
-            class="flex flex-col justify-between w-6 h-5 cursor-pointer hamburger"
-          >
-            <span
-              class="peer-checked:rotate-45 peer-checked:translate-y-2"
-            ></span>
-            <span class="peer-checked:opacity-0"></span>
-            <span
-              class="peer-checked:-rotate-45 peer-checked:-translate-y-2"
-            ></span>
-          </label>
+          <!-- Hamburger button (only visible on small screens) -->
+          <div class="md:hidden">
+            <input type="checkbox" id="menu-toggle" class="hidden peer" />
+            <label
+              for="menu-toggle"
+              class="flex flex-col justify-between w-6 h-5 cursor-pointer"
+            >
+              <span
+                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:rotate-45 peer-checked:translate-y-2"
+              ></span>
+              <span
+                class="block w-full h-0.5 bg-white transition duration-300 opacity-100 peer-checked:opacity-0"
+              ></span>
+              <span
+                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:-rotate-45 peer-checked:-translate-y-2"
+              ></span>
+            </label>
 
-          <ul
-            class="nav-container"
-          >
-            <li><a href="home.html" class="nav-link">Home</a></li>
-            <li><a href="9.1.html" class="nav-link">Processes</a></li>
+            <!-- Dropdown menu -->
+            <ul
+              class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
+            >
+              <li>
+                <a href="home.html" class="text-white hover:text-blue-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="9.1.html" class="text-white hover:text-blue-300"
+                  >Processes</a
+                >
+              </li>
+              <li>
+                <a href="9.2 index.html" class="text-white hover:text-blue-300"
+                  >Program Dynamics</a
+                >
+              </li>
+              <li>
+                <a href="lawrence.html" class="text-white hover:text-blue-300"
+                  >Software Maintenance</a
+                >
+              </li>
+              <li>
+                <a href="index.html" class="text-white hover:text-blue-300"
+                  >Legacy System Management</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Desktop menu -->
+          <ul class="hidden md:flex space-x-8 text-base font-semibold">
             <li>
-              <a href="9.2 index.html" class="nav-link">Program Dynamics</a>
+              <a href="home.html" class="text-white hover:text-blue-300"
+                >Home</a
+              >
             </li>
             <li>
-              <a href="lawrence.html" class="nav-link">Software Maintenance</a>
+              <a href="9.1.html" class="text-white hover:text-blue-300"
+                >Processes</a
+              >
             </li>
             <li>
-              <a href="index.html" class="nav-link">Legacy System Management</a>
+              <a href="9.2 index.html" class="text-white hover:text-blue-300"
+                >Program Dynamics</a
+              >
+            </li>
+            <li>
+              <a href="lawrence.html" class="text-white hover:text-blue-300"
+                >Software Maintenance</a
+              >
+            </li>
+            <li>
+              <a href="index.html" class="text-white hover:text-blue-300"
+                >Legacy System Management</a
+              >
             </li>
           </ul>
         </div>
-
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-8 text-base font-semibold">
-          <li><a href="home.html" class="nav-link">Home</a></li>
-          <li><a href="9.1.html" class="nav-link">Processes</a></li>
-          <li>
-            <a href="9.2 index.html" class="nav-link">Program Dynamics</a>
-          </li>
-          <li>
-            <a href="lawrence.html" class="nav-link">Software Maintenance</a>
-          </li>
-          <li>
-            <a href="index.html" class="nav-link">Legacy System Management</a>
-          </li>
-        </ul>
       </div>
     </nav>
     
