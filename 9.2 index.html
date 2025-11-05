@@ -1,51 +1,286 @@
-<DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software evolution</title>
-    <link rel="stylesheet" href="./src/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 9 Software Evolution</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
 
-</head>
-    <h1 class="m-100">Chapter 9 Software evolution</h1>
-    <nav>
-        <a href="9.1">Evolution processes</a>
-        <a href="9.2 index.html">Program evolution dynamics</a>
-        <a href="9.3">Software maintenance</a>
-        <a href="index.html">Legacy system management</a>
+  <body>
+<body class="bg-gray-50">
+    <nav class="bg-gray-900 fixed w-full top-0 left-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <a href="home.html" class="text-2xl font-bold text-white">
+            Software Evolution
+          </a>
+
+          <!-- Hamburger button (only visible on small screens) -->
+          <div class="md:hidden">
+            <input type="checkbox" id="menu-toggle" class="hidden peer" />
+            <label
+              for="menu-toggle"
+              class="flex flex-col justify-between w-6 h-5 cursor-pointer"
+            >
+              <span
+                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:rotate-45 peer-checked:translate-y-2"
+              ></span>
+              <span
+                class="block w-full h-0.5 bg-white transition duration-300 opacity-100 peer-checked:opacity-0"
+              ></span>
+              <span
+                class="block w-full h-0.5 bg-white transform transition duration-300 origin-center peer-checked:-rotate-45 peer-checked:-translate-y-2"
+              ></span>
+            </label>
+
+            <!-- Dropdown menu -->
+            <ul
+              class="absolute left-0 top-16 w-full bg-gray-900 flex flex-col items-center space-y-4 py-4 opacity-0 invisible peer-checked:opacity-100 peer-checked:visible transition-all duration-300"
+            >
+              <li>
+                <a href="home.html" class="text-white hover:text-blue-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="9.1.html" class="text-white hover:text-blue-300"
+                  >Processes</a
+                >
+              </li>
+              <li>
+                <a href="9.2 index.html" class="text-white hover:text-blue-300"
+                  >Program Dynamics</a
+                >
+              </li>
+              <li>
+                <a href="lawrence.html" class="text-white hover:text-blue-300"
+                  >Software Maintenance</a
+                >
+              </li>
+              <li>
+                <a href="index.html" class="text-white hover:text-blue-300"
+                  >Legacy System Management</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Desktop menu -->
+          <ul class="hidden md:flex space-x-8 text-base font-semibold">
+            <li>
+              <a href="home.html" class="text-white hover:text-blue-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="9.1.html" class="text-white hover:text-blue-300"
+                >Processes</a
+              >
+            </li>
+            <li>
+              <a href="9.2 index.html" class="text-white hover:text-blue-300"
+                >Program Dynamics</a
+              >
+            </li>
+            <li>
+              <a href="lawrence.html" class="text-white hover:text-blue-300"
+                >Software Maintenance</a
+              >
+            </li>
+            <li>
+              <a href="index.html" class="text-white hover:text-blue-300"
+                >Legacy System Management</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-<body>
-    <main>
-<section>
 
-<article>
-    <h1>9.2 Program evolution dynamics</h1>
-</article>
+    <!-- Main Content -->
+    <main class= main-content>
+      <div
+        class="backgroundcres max-w-5xl mx-auto p-10 rounded-t-lg text-justify"
+      >
+        <header class="mb-10 text-center">
+          <h1 class="text-4xl mb-2">Program Dynamics</h1>
+          <p class="text-muted">Chapter 9 · Updated October 2025</p>
+          <p class="text-muted">
+            Written By: <span class="author-name">Cresmarie A. Codizal</span>
+          </p>
+        </header>
 
-<article>
-    <p> Program evolution dynamics is the study of system change. In the 1970s and 1980s, Lehman and Belady (1985) carried out several empirical studies of system change with a view to understanding more about characteristics of software evolution. The work continued in the 1990s as Lehman and others investigated the significance of feedback in evolution processes (Lehman, 1996; Lehman et al., 1998; Lehman et al., 2001). From these studies, they proposed ‘Lehman’s laws’ concerning system change (Figure 9.7).</p>
-    <p> Lehman and Belady claim these laws are likely to be true for all types of large organizational software systems (what they call E-type systems). These are systems in which the requirements are changing to reflect changing business needs. New releases of the system are essential for the system to provide business value.</p>
-    <p> The first law states that system maintenance is an inevitable process. As the system’s environment changes, new requirements emerge and the system must be modified. When the modified system is reintroduced to the environment, this promotes more environmental changes, so the evolution process starts again.</p>
-    <p>The second law states that, as a system is changed, its structure is degraded. The only way to avoid this happening is to invest in preventative maintenance. You spend time improving the software structure without adding to its functionality. Obviously, this means additional costs, over and above those of implementing required system changes</p>
-</article>
+        <article>
+          <section class="figurecres">
+            <h1 class="text-2xl mt-30 mb-2 text-center">
+              9.2 Program Evolution Dynamics
+            </h1>
+          </section>
+        </article>
 
-<section class =>
-    <img src="Table 1.png" alt="">
-</section>
+        <article>
+          <section class="text-2xl mx-10 mt-10 mb-2">
+            <p>
+              Program evolution dynamics is the study of system change. In the
+              1970s and 1980s, Lehman and Belady (1985) carried out several
+              empirical studies of system change with a view to understanding
+              more about characteristics of software evolution. The work
+              continued in the 1990s as Lehman and others investigated the
+              significance of feedback in evolution processes (Lehman, 1996;
+              Lehman et al., 1998; Lehman et al., 2001). From these studies,
+              they proposed ‘Lehman’s laws’ concerning system change (Figure
+              9.7).
+            </p>
 
-<article>
-    <h1>Figure 9.7 Lehman’slaws</h1>
-    <p>The third law is, perhaps, the most interesting and the most contentious of Lehman’s laws. It suggests that large systems have a dynamic of their own that is established at an early stage in the development process. This determines the gross trends of the system maintenance process and limits the number of possible system changes. Lehman and Belady suggest that this law is a consequence of structural factors that influence and constrain system change, and organizational factors that affect the evolution process.</p>
-    <p>The structural factors that affect the third law come from the complexity of large systems. As you change and extend a program, its structure tends to degrade. This is true of all types of system (not just software) and it occurs because you are adapting a structure intended for one purpose for a different purpose. This degradation, if unchecked, makes it more and more difficult to make further changes to the program. Making small changes reduces the extent of structural degradation and so lessens the risks of causing serious system dependability problems. If you try and make large changes, there is a high probability that these will introduce new faults. These then inhibit further program changes.</p>
-    <p>The organizational factors that affect the third law reflect the fact that large systems are usually produced by large organizations. These companies have internal bureaucracies that set the change budget for each system and control the decision making process. Companies have to make decisions on the risks and value of the  changes and the costs involved. Such decisions take time to make and, sometimes, it takes longer to decide on the changes to be made than change implementation. The speed of the organization’s decision-making processes therefore governs the rate of change of the system.</p>
-    <p>Lehman’s fourth law suggests that most large programming projects work in a ‘saturated’ state. That is, a change to resources or staffing has imperceptible effects on the long-term evolution of the system. This is consistent with the third law, which suggests that program evolution is largely independent of management decisions. This law confirms that large software development teams are often unproductive because communication overheads dominate the work of the team.</p>
-    <p>Lehman’s fifth law is concerned with the change increments in each system release. Adding new functionality to a system inevitably introduces new system faults. The more functionality added in each release, the more faults there will be. Therefore, a large increment in functionality in one system release means that this will have to be followed by a further release in which the new system faults are repaired. Relatively little new functionality should be included in this release. This law suggests that you should not budget for large functionality increments in each release without taking into account the need for fault repair.</p>
-    <p>The first five laws were in Lehman’s initial proposals; the remaining laws were added after further work. The sixth and seventh laws are similar and essentially say that users of software will become increasingly unhappy with it unless it is maintained and new functionality is added to it. The final law reflects the most recent work on feedback processes, although it is not yet clear how this can be applied in practical software development.</p>
-    <p>Lehman’s observations seem generally sensible. They should be taken into account when planning the maintenance process. It may be that business considerations require them to be ignored at any one time. For example, for marketing reasons, it may be necessary to make several major system changes in a single release. The likely consequences of this are that one or more releases devoted to error repair are likely to be required. You often see this in personal computer software when a major new release of an application is often quickly followed by a bug repair update.</p>
-</article>
-</section>
+            <p>
+              Lehman and Belady claim these laws are likely to be true for all
+              types of large organizational software systems (what they call
+              E-type systems). These are systems in which the requirements are
+              changing to reflect changing business needs. New releases of the
+              system are essential for the system to provide business value.
+            </p>
 
+            <p>
+              The first law states that system maintenance is an inevitable
+              process. As the system’s environment changes, new requirements
+              emerge and the system must be modified. When the modified system
+              is reintroduced to the environment, this promotes more
+              environmental changes, so the evolution process starts again.
+            </p>
+
+            <p>
+              The second law states that, as a system is changed, its structure
+              is degraded. The only way to avoid this happening is to invest in
+              preventative maintenance. You spend time improving the software
+              structure without adding to its functionality. Obviously, this
+              means additional costs, over and above those of implementing
+              required system changes.
+            </p>
+          </section>
+        </article>
+
+        <section>
+          <img src="images/Table 1.png" class="articlecres" alt="" />
+        </section>
+
+        <article>
+          <section class="figurecres">
+            <h1 class="text-2xl mt-10 mb-10 text-center">
+              Figure 9.7 Lehman’s Laws
+            </h1>
+          </section>
+          <article>
+            <p>
+              The third law is, perhaps, the most interesting and the most
+              contentious of Lehman’s laws. It suggests that large systems have
+              a dynamic of their own that is established at an early stage in
+              the development process. This determines the gross trends of the
+              system maintenance process and limits the number of possible
+              system changes. Lehman and Belady suggest that this law is a
+              consequence of structural factors that influence and constrain
+              system change, and organizational factors that affect the
+              evolution process.
+            </p>
+
+            <p>
+              The structural factors that affect the third law come from the
+              complexity of large systems. As you change and extend a program,
+              its structure tends to degrade. This is true of all types of
+              system (not just software) and it occurs because you are adapting
+              a structure intended for one purpose for a different purpose. This
+              degradation, if unchecked, makes it more and more difficult to
+              make further changes to the program. Making small changes reduces
+              the extent of structural degradation and so lessens the risks of
+              causing serious system dependability problems. If you try and make
+              large changes, there is a high probability that these will
+              introduce new faults. These then inhibit further program changes.
+            </p>
+
+            <p>
+              The organizational factors that affect the third law reflect the
+              fact that large systems are usually produced by large
+              organizations. These companies have internal bureaucracies that
+              set the change budget for each system and control the decision
+              making process. Companies have to make decisions on the risks and
+              value of the changes and the costs involved. Such decisions take
+              time to make and, sometimes, it takes longer to decide on the
+              changes to be made than change implementation. The speed of the
+              organization’s decision-making processes therefore governs the
+              rate of change of the system.
+            </p>
+
+            <p>
+              Lehman’s fourth law suggests that most large programming projects
+              work in a ‘saturated’ state. That is, a change to resources or
+              staffing has imperceptible effects on the long-term evolution of
+              the system. This is consistent with the third law, which suggests
+              that program evolution is largely independent of management
+              decisions. This law confirms that large software development teams
+              are often unproductive because communication overheads dominate
+              the work of the team.
+            </p>
+
+            <p>
+              Lehman’s fifth law is concerned with the change increments in each
+              system release. Adding new functionality to a system inevitably
+              introduces new system faults. The more functionality added in each
+              release, the more faults there will be. Therefore, a large
+              increment in functionality in one system release means that this
+              will have to be followed by a further release in which the new
+              system faults are repaired. Relatively little new functionality
+              should be included in this release. This law suggests that you
+              should not budget for large functionality increments in each
+              release without taking into account the need for fault repair.
+            </p>
+
+            <p>
+              The first five laws were in Lehman’s initial proposals; the
+              remaining laws were added after further work. The sixth and
+              seventh laws are similar and essentially say that users of
+              software will become increasingly unhappy with it unless it is
+              maintained and new functionality is added to it. The final law
+              reflects the most recent work on feedback processes, although it
+              is not yet clear how this can be applied in practical software
+              development.
+            </p>
+
+            <p>
+              Lehman’s observations seem generally sensible. They should be
+              taken into account when planning the maintenance process. It may
+              be that business considerations require them to be ignored at any
+              one time. For example, for marketing reasons, it may be necessary
+              to make several major system changes in a single release. The
+              likely consequences of this are that one or more releases devoted
+              to error repair are likely to be required. You often see this in
+              personal computer software when a major new release of an
+              application is often quickly followed by a bug repair update.
+            </p>
+          </article>
+        </article>
+      </div>
     </main>
-</body>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div
+        class="px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto"
+      >
+        <p class="text-sm">
+          &copy; 2025
+          <span class="font-semibold text-white">Software Evolution</span>. All
+          rights reserved.
+        </p>
+        <p class="text-sm mt-2 md:mt-0">
+          Contact:
+          <span class="text-blue-400">Gonzales</span>,
+          <span class="text-blue-400">Riosa</span>,
+          <span class="text-blue-400">Codizal</span>,
+          <span class="text-blue-400">Villalobos</span>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
