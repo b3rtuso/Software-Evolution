@@ -144,18 +144,6 @@
 
 
 
-/* ===== Cresmarie STYLES ===== */
-.articlecres {
-  @apply border-solid border-2 mt-10 mx-18 animate-pulse mx-auto;
-}
-.backgroundcres {
-  @apply bg-[#9EC6F3] rounded-t-lg text-justify p-10;
-}
-
-
-.figurecres {
-  @apply bg-[#F5D2D2];
-}
 
 
 
@@ -211,29 +199,4 @@
   }
   
 
-/* ===== Lawrence STYLES ===== */
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
 
-.law {
-  background: linear-gradient(90deg, #0f172a, #1e3a8a, #facc15);
-  background-size: 200% 200%;
-  color: #fefce8;
-  padding: 3.5rem;
-  border-radius: 1rem;
-  text-align: center;
-  letter-spacing: 0.5px;
-  box-shadow: inset 0 0 0 2px rgba(250, 204, 21, 0.3),
-              0 10px 25px rgba(0, 0, 0, 0.4);
-  animation: gradient-move 12s ease infinite;
-  transition: all 0.4s ease;
-}
-
-.law:hover {
-  background-position: 100% 50%;
-  box-shadow: inset 0 0 0 2px rgba(250, 204, 21, 0.6),
-              0 15px 30px rgba(250, 204, 21, 0.4);
-  transform: scale(1.03);
-}

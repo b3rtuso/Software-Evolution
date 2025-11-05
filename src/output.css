@@ -866,66 +866,6 @@
     }
   }
 }
-.articlecres {
-  margin-inline: calc(var(--spacing) * 18);
-  margin-inline: auto;
-  margin-top: calc(var(--spacing) * 10);
-  animation: var(--animate-pulse);
-  border-style: var(--tw-border-style);
-  border-width: 2px;
-  --tw-border-style: solid;
-  border-style: solid;
-}
-.backgroundcres {
-  border-top-left-radius: var(--radius-lg);
-  border-top-right-radius: var(--radius-lg);
-  background-color: #9EC6F3;
-  padding: calc(var(--spacing) * 10);
-  text-align: justify;
-}
-.figurecres {
-  background-color: #F5D2D2;
-}
-.cath {
-  position: relative;
-  background: #f9fafb;
-  color: #111827;
-  padding: 3.5rem;
-  border-radius: 1.25rem;
-  line-height: 1.75;
-  letter-spacing: 0.2px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-.cath ul,.cath li {
-  color: inherit;
-  transition: color 0.3s ease;
-  list-style-position: inside;
-}
-.cath .content p ul {
-  margin-bottom: 1.5rem;
-  transition: opacity 0.3s ease;
-}
-.cath:hover .content p:not(:hover) {
-  opacity: 0.6;
-}
-.cath:hover {
-  background: #111827;
-  color: #f9fafb;
-  box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
-  transition: all 0.4s ease;
-}
-.cath h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #2563eb;
-  transition: color 0.3s ease;
-}
-.cath:hover h2 {
-  color: #93c5fd;
-}
 @keyframes gradient-move {
   0% {
     background-position: 0% 50%;
@@ -934,57 +874,24 @@
     background-position: 100% 50%;
   }
 }
-.law {
-  background: linear-gradient(90deg, #0f172a, #1e3a8a, #facc15);
-  background-size: 200% 200%;
-  color: #fefce8;
+.cath {
+  background: linear-gradient(100deg, #022c22, #064e3b, #10b981, #a7f3d0);
+  background-size: 250% 250%;
+  color: #ecfdf5;
   padding: 3.5rem;
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   text-align: center;
-  letter-spacing: 0.5px;
-  box-shadow: inset 0 0 0 2px rgba(250, 204, 21, 0.3), 0 10px 25px rgba(0, 0, 0, 0.4);
+  font-family: 'Merriweather', serif;
+  letter-spacing: 0.6px;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), inset 0 0 0 2px rgba(167, 243, 208, 0.4);
   animation: gradient-move 12s ease infinite;
   transition: all 0.4s ease;
 }
-.law:hover {
+.cath:hover {
   background-position: 100% 50%;
-  box-shadow: inset 0 0 0 2px rgba(250, 204, 21, 0.6), 0 15px 30px rgba(250, 204, 21, 0.4);
-  transform: scale(1.03);
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
+  transform: scale(1.04);
+  box-shadow: 0 0 35px rgba(16, 185, 129, 0.5), inset 0 0 0 2px rgba(167, 243, 208, 0.6);
+  text-shadow: 0 0 8px rgba(255,255,255,0.7);
 }
 @property --tw-space-y-reverse {
   syntax: "*";
